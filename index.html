@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Quote Generator</title>
+
+<style>
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:40px;
+}
+
+button{
+padding:10px 20px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Motivation Quote</h1>
+
+<p id="quote">Click button to generate quote</p>
+
+<button onclick="generate()">Generate</button>
+
+<script>
+
+let quotes=[
+"Success comes from consistency",
+"Work hard stay humble",
+"Discipline beats motivation",
+"Small progress is still progress"
+];
+
+function generate(){
+
+let random=Math.floor(Math.random()*quotes.length);
+
+document.getElementById("quote").innerText=quotes[random];
+
+}
+
+</script>
+
+</body>
+
+</html>
